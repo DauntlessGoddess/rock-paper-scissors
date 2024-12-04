@@ -6,6 +6,9 @@ const choices = {
   c: "scissors",
 };
 
+const humanScore = 0;
+const computerScore = 0;
+
 function getComputerChoice(obj) {
   const keys = Object.keys(obj);
   const randomIndex = Math.floor(Math.random() * keys.length);
@@ -16,4 +19,13 @@ function getComputerChoice(obj) {
 const computerChoice = getComputerChoice(choices);
 console.log(computerChoice);
 
-function getHumanChoice() {}
+function getHumanChoice() {
+  let input = prompt("Please enter rock, paper, or scissors");
+  input = input.toLowerCase();
+  console.log(input);
+}
+
+const humanChoice = getHumanChoice();
+console.log(humanChoice);
+
+function playRound(humanChoice, computerChoice) {}
